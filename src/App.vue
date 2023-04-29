@@ -12,6 +12,7 @@ import Log from './components/Log.vue'
 
 <style scoped>
 main {
+	background-color: black;
 	display: grid;
 	grid-template-rows: 75vh 25vh;
 	height: 100vh;

@@ -6,6 +6,10 @@
 
 <style scoped>
 .log {
-	background-color: lightgray;
+	background-color: #333333;
+	border-radius: 5px;
+	color: white;
+	margin: 0.5em;
+	padding: 1em;
 }
 </style>
