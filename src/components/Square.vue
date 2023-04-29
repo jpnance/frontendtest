@@ -13,7 +13,7 @@ function toggleHighlight() {
 <template>
 	<div
 		class="square"
-		:class="{ dark: color === 'dark', light: color === 'light', highlighted: highlighted }"
+		:class="{ [color]: true, highlighted: highlighted }"
 		@click="toggleHighlight"
 	/>
 </template>
