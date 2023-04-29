@@ -5,21 +5,11 @@ function squareColor(index) {
 	const rankIndex = Math.floor(index / 8)
 	const fileIndex = index % 8
 
-	if (rankIndex % 2) {
-		if (fileIndex % 2) {
-			return 'light'
-		}
-		else {
-			return 'dark'
-		}
+	if (rankIndex % 2 === fileIndex % 2) {
+		return 'light'
 	}
 	else {
-		if (fileIndex % 2) {
-			return 'dark'
-		}
-		else {
-			return 'light'
-		}
+		return 'dark'
 	}
 }
 </script>
