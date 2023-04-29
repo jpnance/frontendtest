@@ -1,9 +1,21 @@
 <script setup>
-const props = defineProps(['color'])
+import { ref } from 'vue'
+
+const props = defineProps(['color', 'name'])
+
+const highlighted = ref(false)
+
+function toggleHighlight() {
+	highlighted.value = !highlighted.value
+}
 </script>
 
 <template>
-	<div class="square" :class="{ dark: color === 'dark', light: color === 'light' }" />
+	<div
+		class="square"
+		:class="{ dark: color === 'dark', light: color === 'light', highlighted: highlighted }"
+		@click="toggleHighlight"
+	/>
 </template>
 
 <style scoped>
@@ -16,5 +28,13 @@ const props = defineProps(['color'])
 
 .square.dark {
 	background-color: burlywood;
+}
+
+.square.light.highlighted {
+	background-color: pink;
+}
+
+.square.dark.highlighted {
+	background-color: lightpink;
 }
 </style>
