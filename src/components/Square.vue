@@ -20,6 +20,7 @@ function toggleHighlight() {
 
 <style scoped>
 .square {
+	cursor: pointer;
 }
 
 .square.light {
