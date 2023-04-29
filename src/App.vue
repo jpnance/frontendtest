@@ -1,12 +1,24 @@
 <script setup>
+import { ref, provide } from 'vue'
 import Chessboard from './components/Chessboard.vue'
 import Log from './components/Log.vue'
+
+const log = ref([])
+
+function addToLog(item) {
+	log.value.push(item)
+}
+
+provide('log', {
+	log,
+	addToLog
+})
 </script>
 
 <template>
   <main>
     <Chessboard />
-	<Log />
+	<Log :log="log" />
   </main>
 </template>
 

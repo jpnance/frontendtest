@@ -1,12 +1,20 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, inject } from 'vue'
 
 const props = defineProps(['color', 'name'])
 
+const log = inject('log')
 const highlighted = ref(false)
 
-function toggleHighlight() {
+function toggleHighlightAndLogEvent(name) {
 	highlighted.value = !highlighted.value
+
+	if (highlighted.value) {
+		log.addToLog(`${name} was highlighted`)
+	}
+	else {
+		log.addToLog(`${name} was unhighlighted`)
+	}
 }
 </script>
 
@@ -14,7 +22,7 @@ function toggleHighlight() {
 	<div
 		class="square"
 		:class="{ [color]: true, highlighted: highlighted }"
-		@click="toggleHighlight"
+		@click="toggleHighlightAndLogEvent(name)"
 	/>
 </template>
 

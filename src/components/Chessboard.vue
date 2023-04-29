@@ -12,6 +12,13 @@ function squareColor(index) {
 		return 'dark'
 	}
 }
+
+function coordinate(index) {
+	const files = 'abcdefgh'
+	const ranks = '87654321'
+
+	return files[index % 8] + ranks[Math.floor(index / 8)]
+}
 </script>
 
 <template>
@@ -19,6 +26,7 @@ function squareColor(index) {
 		<Square
 			v-for="(i, index) in Array(64)"
 			:color="squareColor(index)"
+			:name="coordinate(index)"
 		/>
 	</div>
 </template>
