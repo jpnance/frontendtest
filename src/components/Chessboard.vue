@@ -37,13 +37,14 @@ function coordinate(index) {
 	aspect-ratio: 1 / 1;
 	display: grid;
 	grid-template-columns: repeat(8, 1fr);
-	max-height: calc(75vh - 1em);
 	margin: 0.5em;
+	width: calc(100% - 1em);
+	justify-self: center;
 }
 
 @media (min-width: 576px) {
 	.chessboard {
-		max-height: calc(100vh - 1em);
+		max-width: calc(100vh - 1em);
 	}
 }
 </style>
