@@ -26,7 +26,7 @@ watch(
 	border-radius: 5px;
 	color: white;
 	margin: 0.5em;
-	overflow: scroll;
+	overflow-y: scroll;
 	padding: 1em;
 }
 </style>
