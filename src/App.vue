@@ -26,7 +26,7 @@ provide('log', {
 main {
 	background-color: black;
 	display: grid;
-	grid-template-rows: 75vh 25vh;
+	grid-template-rows: 3fr 1fr;
 	height: 100vh;
 }
 
